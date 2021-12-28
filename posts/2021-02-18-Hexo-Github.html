@@ -1,0 +1,176 @@
+<!DOCTYPE html><html lang="en">
+	
+	
+	<head>
+		
+		<!-- 谷歌ad-->
+<script data-ad-client="ca-pub-1293855853975663" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="The Art Gallery Guardian">
+    <meta name="author" content="Rui Wang">
+    <meta property="og:title" content="年轻人的第一个网站｜hexo详细搭建教程">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="The Art Gallery Guardian">
+    <meta property="article:tag" content="math, life">
+    <title>年轻人的第一个网站｜hexo详细搭建教程</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+ 
+ 
+<!-- 百度统计-->
+    <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?e076e26dccfe62cef6ef9a32f56a65e5";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/css/default.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/blog.css" crossorigin="anonymous">
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="https://biowr.github.io/rss.xml">
+  </head>
+  <body>
+    <header class="hide-on-print">
+        <div id="site-title">
+            <a href="/blog.html">The Art Gallery Guardian</a>
+        </div>
+        <div style="display: none;">
+          <img src="/files/wang/logo.png">
+        </div>
+    </header>
+    <nav class="hide-on-print">
+      <ul>
+         <li><a href="/">About</a></li>
+        <li><a href="/pages/blog.html">Blog</a></li>
+	   <li><a href="/pages/vlog.html">Vlog</a></li>
+        <li><a href="/files/cv.pdf">CV</a></li>
+       <li><a href="/pages/tools.html">Tools</a></li>
+       <li><a href="/pages/film.html">Film</a></li>
+       <li><a href="/pages/24fps.html">24 FPS</a></li>
+      </ul>
+    </nav>
+    <main>
+      <article>
+        <h1 id="article-title">年轻人的第一个网站｜hexo详细搭建教程,使用Github Pages</h1>
+        <br>
+<!--文章主体-->
+	     
+
+<p>之前一直在寻找合适的建站方法，想把自己的写的文章和拍的照片视频放上去。偶然看到一个主题特别喜欢，突然有了搭建下去的冲动，开始了人生中第一个搭建网站之路。</p><p>搭建步骤</p><p>购买域名</p><p>创建GitHub仓库</p><p>安装Git</p><p>安装Node.js</p><p>安装Hexo</p><p>推送网站</p><p>绑定域名</p><p>更换主题</p><p>学习MarkDown语法</p><p>发布文章</p><p>使用图床</p><p>购买域名</p><p>域名注册商有很多，国内用户推荐在阿里云万网购买，除去优惠算是最便宜的了。</p><p><a href="https://links.jianshu.com/go?to=https%3A%2F%2Fwanwang.aliyun.com%2F" target="_blank">https://wanwang.aliyun.com/</a></p><p>购买之后可以自定义DNS服务器，最后续CNAME作准备。</p><p>创建GitHub仓库</p><p>当然先要注册一个GitHub账户啦，注册之后，新建一个仓库。假如你的用户名是 biowr，创建的仓库名就要是这样的 biowr.github.io , 其他默认就好。</p><div class="image-package">
+  <div class="image-container" style="max-width: 434px; max-height: 99px; background-color: transparent;">
+  <div class="image-container-fill" style="padding-bottom: 22.81%;"></div>
+  <div class="image-view" data-width="434" data-height="99"><img data-original-src="//upload-images.jianshu.io/upload_images/22988271-f3fdb184dbf99d15.png" data-original-width="434" data-original-height="99" data-original-format="image/png" data-original-filesize="7828" data-image-index="0" style="cursor: zoom-in;" class="" src="//upload-images.jianshu.io/upload_images/22988271-f3fdb184dbf99d15.png?imageMogr2/auto-orient/strip|imageView2/2/w/434/format/webp"></div>
+  </div>
+  <div class="image-caption"></div>
+  </div><div class="image-package">
+  <div class="image-container" style="max-width: 300px; max-height: 50px; background-color: transparent;">
+  <div class="image-container-fill" style="padding-bottom: 16.669999999999998%;"></div>
+  <div class="image-view" data-width="300" data-height="50"><img data-original-src="//upload-images.jianshu.io/upload_images/22988271-42b701c937add37e.png" data-original-width="300" data-original-height="50" data-original-format="image/png" data-original-filesize="4995" data-image-index="1" style="cursor: zoom-in;" class="" src="//upload-images.jianshu.io/upload_images/22988271-42b701c937add37e.png?imageMogr2/auto-orient/strip|imageView2/2/w/300/format/webp"></div>
+  </div>
+  <div class="image-caption"></div>
+  </div><p>安装Git</p><p>官网地址：<a href="https://links.jianshu.com/go?to=https%3A%2F%2Fgit-scm.com%2Fabout" target="_blank">https://git-scm.com/about</a></p><p>选择合适的版本安装</p><p>设置user.name和user.email配置信息</p><p>gitconfig--globaluser.name"你的GitHub用户名"</p><p>gitconfig--globaluser.email"你的GitHub注册邮箱"</p><p>生成ssh密钥文件：</p><p>ssh-keygen-trsa-C"你的GitHub注册邮箱"</p><div class="image-package">
+  <div class="image-container" style="max-width: 649px; max-height: 404px; background-color: transparent;">
+  <div class="image-container-fill" style="padding-bottom: 62.25000000000001%;"></div>
+  <div class="image-view" data-width="649" data-height="404"><img data-original-src="//upload-images.jianshu.io/upload_images/22988271-3a07a4f79e6e6025.png" data-original-width="649" data-original-height="404" data-original-format="image/png" data-original-filesize="53909" data-image-index="2" style="cursor: zoom-in;" class="" src="//upload-images.jianshu.io/upload_images/22988271-3a07a4f79e6e6025.png?imageMogr2/auto-orient/strip|imageView2/2/w/649/format/webp"></div>
+  </div>
+  <div class="image-caption"></div>
+  </div><p>然后找到生成的.ssh的文件夹中的id_rsa.pub密钥，将内容全部复制到github</p><p>打开<a href="https://links.jianshu.com/go?to=https%3A%2F%2Flink.zhihu.com%2F%3Ftarget%3Dhttps%253A%2F%2Fgithub.com%2Fsettings%2Fkeys" target="_blank">GitHub_Settings_keys</a> 页面，新建new SSH Key</p><div class="image-package">
+  <div class="image-container" style="max-width: 700px; max-height: 449px; background-color: transparent;">
+  <div class="image-container-fill" style="padding-bottom: 64.09%;"></div>
+  <div class="image-view" data-width="2200" data-height="1410"><img data-original-src="//upload-images.jianshu.io/upload_images/22988271-927376e8bf09fb4b.png" data-original-width="2200" data-original-height="1410" data-original-format="image/png" data-original-filesize="308157" data-image-index="3" style="cursor: zoom-in;" class="" src="//upload-images.jianshu.io/upload_images/22988271-927376e8bf09fb4b.png?imageMogr2/auto-orient/strip|imageView2/2/w/1200/format/webp"></div>
+  </div>
+  <div class="image-caption"></div>
+  </div><p>Title为标题，任意填即可，将刚刚复制的id_rsa.pub内容粘贴进去，最后点击Add SSH key。在Git Bash中检测GitHub公钥设置是否成功，输入 ssh <a href="https://links.jianshu.com/go?to=mailto%3Agit%40github.com" target="_blank">git@github.com</a></p><div class="image-package">
+  <div class="image-container" style="max-width: 564px; max-height: 347px; background-color: transparent;">
+  <div class="image-container-fill" style="padding-bottom: 61.519999999999996%;"></div>
+  <div class="image-view" data-width="564" data-height="347"><img data-original-src="//upload-images.jianshu.io/upload_images/22988271-f545c02eeee14414.png" data-original-width="564" data-original-height="347" data-original-format="image/png" data-original-filesize="33226" data-image-index="4" style="cursor: zoom-in;" class="" src="//upload-images.jianshu.io/upload_images/22988271-f545c02eeee14414.png?imageMogr2/auto-orient/strip|imageView2/2/w/564/format/webp"></div>
+  </div>
+  <div class="image-caption"></div>
+  </div><p>安装Node.js</p><p>官网下载地址：<a href="https://links.jianshu.com/go?to=https%3A%2F%2Fnodejs.org%2Fzh-cn%2Fdownload%2F" target="_blank">https://nodejs.org/zh-cn/download/</a></p><p>选择合适的版本安装</p><div class="image-package">
+  <div class="image-container" style="max-width: 700px; max-height: 642px; background-color: transparent;">
+  <div class="image-container-fill" style="padding-bottom: 61.85000000000001%;"></div>
+  <div class="image-view" data-width="1038" data-height="642"><img data-original-src="//upload-images.jianshu.io/upload_images/22988271-3072bd7edf7b297d.png" data-original-width="1038" data-original-height="642" data-original-format="image/png" data-original-filesize="105483" data-image-index="5" style="cursor: zoom-in;" class="" src="//upload-images.jianshu.io/upload_images/22988271-3072bd7edf7b297d.png?imageMogr2/auto-orient/strip|imageView2/2/w/1038/format/webp"></div>
+  </div>
+  <div class="image-caption"></div>
+  </div><p>Hexo基于Node.js，注意安装Node.js会包含环境变量及npm的安装，安装后，检测Node.js是否安装成功，在命令行中输入 node -v :</p><div class="image-package">
+  <div class="image-container" style="max-width: 451px; max-height: 114px; background-color: transparent;">
+  <div class="image-container-fill" style="padding-bottom: 25.28%;"></div>
+  <div class="image-view" data-width="451" data-height="114"><img data-original-src="//upload-images.jianshu.io/upload_images/22988271-0459da7c0cf30cca.png" data-original-width="451" data-original-height="114" data-original-format="image/png" data-original-filesize="13728" data-image-index="6" style="cursor: zoom-in;" class="" src="//upload-images.jianshu.io/upload_images/22988271-0459da7c0cf30cca.png?imageMogr2/auto-orient/strip|imageView2/2/w/451/format/webp"></div>
+  </div>
+  <div class="image-caption"></div>
+  </div><p>安装Hexo</p><p>Hexo就是我们的个人博客网站的框架， 这里需要自己在电脑常里创建一个文件夹，可以命名为Blog，Hexo框架与以后你自己发布的网页都在这个文件夹中。创建好后，进入文件夹中，选择终端运行。</p><p>输入：</p><p>npminstall-ghexo-cli</p><p>这个安装时间较长耐心等待，安装完成后，初始化我们的博客，输入：</p><p>hexo init</p><p>推送网站</p><p>修改根目录里的_config.yml文件称为<b>站点</b>配置文件，如下图</p><div class="image-package">
+  <div class="image-container" style="max-width: 464px; max-height: 281px; background-color: transparent;">
+  <div class="image-container-fill" style="padding-bottom: 60.56%;"></div>
+  <div class="image-view" data-width="464" data-height="281"><img data-original-src="//upload-images.jianshu.io/upload_images/22988271-40a3a22519669363.png" data-original-width="464" data-original-height="281" data-original-format="image/png" data-original-filesize="48688" data-image-index="7" style="cursor: zoom-in;" class="" src="//upload-images.jianshu.io/upload_images/22988271-40a3a22519669363.png?imageMogr2/auto-orient/strip|imageView2/2/w/464/format/webp"></div>
+  </div>
+  <div class="image-caption"></div>
+  </div><p>下一步将我们的Hexo与GitHub关联起来，打开站点的配置文件_config.yml，翻到最后修改为：</p><p>deploy:</p><p> &nbsp;&nbsp; type: git</p><p> &nbsp;&nbsp; repo: 这里填入你之前在GitHub上创建仓库的完整路径，记得加上 .git</p><p> &nbsp;&nbsp; branch: master参考如下：</p><div class="image-package">
+  <div class="image-container" style="max-width: 543px; max-height: 92px; background-color: transparent;">
+  <div class="image-container-fill" style="padding-bottom: 16.939999999999998%;"></div>
+  <div class="image-view" data-width="543" data-height="92"><img data-original-src="//upload-images.jianshu.io/upload_images/22988271-4e58f81d33c614fd.png" data-original-width="543" data-original-height="92" data-original-format="image/png" data-original-filesize="15017" data-image-index="8" style="cursor: zoom-in;" class="" src="//upload-images.jianshu.io/upload_images/22988271-4e58f81d33c614fd.png?imageMogr2/auto-orient/strip|imageView2/2/w/543/format/webp"></div>
+  </div>
+  <div class="image-caption"></div>
+  </div><p>其实就是给hexo d 这个命令做相应的配置，让hexo知道你要把blog部署在哪个位置，很显然，我们部署在我们GitHub的仓库里。最后安装Git部署插件，输入命令：</p><p>npm install hexo-deployer-git --save</p><p>这时，我们分别输入三条命令：</p><p>hexo g</p><p>hexo d</p><p> hexo d 就是部署网站命令，d是deploy的缩写。完成后，打开浏览器输入刚刚的仓库名biowr.github.io，就可以看到自己的网站啦</p><p>绑定域名</p><p>在仓库的settings 绑定自己的域名，然后在博客根目录source文件夹创建CNAME文件，新建txt文档，填写自己绑定的域名，去掉文件后缀。</p><div class="image-package">
+  <div class="image-container" style="max-width: 498px; max-height: 255px; background-color: transparent;">
+  <div class="image-container-fill" style="padding-bottom: 51.2%;"></div>
+  <div class="image-view" data-width="498" data-height="255"><img data-original-src="//upload-images.jianshu.io/upload_images/22988271-b0697d268eab0fa5.png" data-original-width="498" data-original-height="255" data-original-format="image/png" data-original-filesize="36755" data-image-index="9" style="cursor: zoom-in;" class="" src="//upload-images.jianshu.io/upload_images/22988271-b0697d268eab0fa5.png?imageMogr2/auto-orient/strip|imageView2/2/w/498/format/webp"></div>
+  </div>
+  <div class="image-caption"></div>
+  </div><div class="image-package">
+  <div class="image-container" style="max-width: 700px; max-height: 481px; background-color: transparent;">
+  <div class="image-container-fill" style="padding-bottom: 68.66%;"></div>
+  <div class="image-view" data-width="1774" data-height="1218"><img data-original-src="//upload-images.jianshu.io/upload_images/22988271-5d32a1d6f01519b2.png" data-original-width="1774" data-original-height="1218" data-original-format="image/png" data-original-filesize="212046" data-image-index="10" style="cursor: zoom-in;" class="" src="//upload-images.jianshu.io/upload_images/22988271-5d32a1d6f01519b2.png?imageMogr2/auto-orient/strip|imageView2/2/w/1200/format/webp"></div>
+  </div>
+  <div class="image-caption"></div>
+  </div><p>接着进入博客目录中，打开命令行，依次输入：</p><p>hexo clean</p><p>hexo g</p><p>hexo d</p><p>这时候打开浏览器在地址栏输入你的个性化域名将会直接进入你自己搭建的网站。</p><p>更换主题</p><p>如果你不喜欢Hexo默认的主题，可以更换不同的主题，主题传送门：<a href="https://links.jianshu.com/go?to=https%3A%2F%2Flink.zhihu.com%2F%3Ftarget%3Dhttps%253A%2F%2Fhexo.io%2Fthemes%2F" target="_blank">Themes</a> ，我自己使用的是<a href="https://links.jianshu.com/go?to=https%3A%2F%2Fwww.sharvaridesai.com%2F" target="_blank">standrews</a>，这个主题是我向作者10美元购买的，可以在blog目录中的themes文件夹中查看你自己主题是什么。现在把默认主题更改成Next主题，在blog目录中（就是命令行的位置处于blog目录）打开命令行输入：</p><p>git clone https://github.com/sharvaridesai/hexo-theme-edinburgh themes/edinburgh</p><p>这是将主题下载到blog目录的themes主题下的文件夹中。打开<b>站点</b>的_config.yml配置文件，修改主题为standrews</p><div class="image-package">
+  <div class="image-container" style="max-width: 330px; max-height: 82px; background-color: transparent;">
+  <div class="image-container-fill" style="padding-bottom: 24.85%;"></div>
+  <div class="image-view" data-width="330" data-height="82"><img data-original-src="//upload-images.jianshu.io/upload_images/22988271-f321c160510fa720.png" data-original-width="330" data-original-height="82" data-original-format="image/png" data-original-filesize="8223" data-image-index="11" style="cursor: zoom-in;" class="" src="//upload-images.jianshu.io/upload_images/22988271-f321c160510fa720.png?imageMogr2/auto-orient/strip|imageView2/2/w/330/format/webp"></div>
+  </div>
+  <div class="image-caption"></div>
+  </div><p>学习MarkDown语法</p><p>推荐<a href="https://links.jianshu.com/go?to=https%3A%2F%2Fwww.mdnice.com%2F" target="_blank">https://www.mdnice.com/</a></p><p>可以自行学习，导出md文件到博客目录下source/_post/</p><div class="image-package">
+  <div class="image-container" style="max-width: 643px; max-height: 189px; background-color: transparent;">
+  <div class="image-container-fill" style="padding-bottom: 29.39%;"></div>
+  <div class="image-view" data-width="643" data-height="189"><img data-original-src="//upload-images.jianshu.io/upload_images/22988271-1d9f6ad7e7891735.png" data-original-width="643" data-original-height="189" data-original-format="image/png" data-original-filesize="29263" data-image-index="12" style="cursor: zoom-in;" class="" src="//upload-images.jianshu.io/upload_images/22988271-1d9f6ad7e7891735.png?imageMogr2/auto-orient/strip|imageView2/2/w/643/format/webp"></div>
+  </div>
+  <div class="image-caption"></div>
+  </div><p>发布文章</p><p>在写文章时，md文件头需要此文章的一些信息，如标题、封面等</p><p>---</p><p>title: Flim 01</p><p>cover_image: //cdn.jsdelivr.net/gh/ruiprime/ruiprime.github.io@master/images/00%20(1).jpg</p><p>---</p><div class="image-package">
+  <div class="image-container" style="max-width: 700px; max-height: 504px; background-color: transparent;">
+  <div class="image-container-fill" style="padding-bottom: 65.88000000000001%;"></div>
+  <div class="image-view" data-width="765" data-height="504"><img data-original-src="//upload-images.jianshu.io/upload_images/22988271-7b74a500edcd90a9.png" data-original-width="765" data-original-height="504" data-original-format="image/png" data-original-filesize="63991" data-image-index="13" style="cursor: zoom-in;" class="" src="//upload-images.jianshu.io/upload_images/22988271-7b74a500edcd90a9.png?imageMogr2/auto-orient/strip|imageView2/2/w/765/format/webp"></div>
+  </div>
+  <div class="image-caption"></div>
+  </div><p>使用图床</p><p>我用的md编辑器是Typora，图床软件用的是PicGo，使用GitHub仓库作为图床</p><div class="image-package">
+  <div class="image-container" style="max-width: 142px; max-height: 42px; background-color: transparent;">
+  <div class="image-container-fill" style="padding-bottom: 29.580000000000002%;"></div>
+  <div class="image-view" data-width="142" data-height="42"><img data-original-src="//upload-images.jianshu.io/upload_images/22988271-8cb6a683cc17e43e.png" data-original-width="142" data-original-height="42" data-original-format="image/png" data-original-filesize="7715" data-image-index="14" style="cursor: zoom-in;" class="" src="//upload-images.jianshu.io/upload_images/22988271-8cb6a683cc17e43e.png?imageMogr2/auto-orient/strip|imageView2/2/w/142/format/webp"></div>
+  </div>
+  <div class="image-caption"></div>
+  </div><div class="image-package">
+  <div class="image-container" style="max-width: 133px; max-height: 149px; background-color: transparent;">
+  <div class="image-container-fill" style="padding-bottom: 112.03%;"></div>
+  <div class="image-view" data-width="133" data-height="149"><img data-original-src="//upload-images.jianshu.io/upload_images/22988271-d17001dac965b796.png" data-original-width="133" data-original-height="149" data-original-format="image/png" data-original-filesize="13366" data-image-index="15" style="cursor: zoom-in;" class="" src="//upload-images.jianshu.io/upload_images/22988271-d17001dac965b796.png?imageMogr2/auto-orient/strip|imageView2/2/w/133/format/webp"></div>
+  </div>
+  <div class="image-caption"></div>
+  </div><p>最后就是创作时间。</p>
+
+
+            <!--文章末尾-->
+          
+<div class="hide-on-print">
+    <div class="info">Posted by <a href="https://rickywang.baklib.com/">Ricky</a> on <time datetime="2020-04-10">2020-04-15</time>. </div>
+    <div class="info">Tags: math, life.</div>
+</div>
+      </article>
+    </main>
+   
+<footer class="hide-on-print">© 2016 - <time><script>document.write(new Date().getFullYear())</script></time> <a href="/" rel="author">Rui Wang</a>.
+    <a href="/README.html">Blog README</a>.</footer>
+  
+
+</body></html>

@@ -1,0 +1,623 @@
+<!DOCTYPE html><html lang="en">
+	
+	
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="The Art Gallery Guardian">
+    <meta name="author" content="Rui Wang">
+    <meta property="og:title" content="Endnote X9 Tutorial Hand by Hand">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="The Art Gallery Guardian">
+    <meta property="article:tag" content="math, life">
+    <title>Endnote X9 Tutorial Hand by Hand</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+ 
+ 
+<!-- 百度统计-->
+    <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?e076e26dccfe62cef6ef9a32f56a65e5";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/css/default.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/blog.css" crossorigin="anonymous">
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="https://biowr.github.io/rss.xml">
+  </head>
+  <body>
+    <header class="hide-on-print">
+        <div id="site-title">
+            <a href="/blog.html">The Art Gallery Guardian</a>
+        </div>
+        <div style="display: none;">
+          <img src="/files/wang/logo.png">
+        </div>
+    </header>
+    <nav class="hide-on-print">
+      <ul>
+         <li><a href="/">About</a></li>
+        <li><a href="/pages/blog.html">Blog</a></li>
+	   <li><a href="/pages/vlog.html">Vlog</a></li>
+        <li><a href="/files/cv.pdf">CV</a></li>
+       <li><a href="/pages/tools.html">Tools</a></li>
+       <li><a href="/pages/film.html">Film</a></li>
+       <li><a href="/pages/24fps.html">24 FPS</a></li>
+      </ul>
+    </nav>
+    <main>
+      <article>
+        <h1 id="article-title">Endnote X9 Tutorial Hand by Hand</h1>
+        <br>
+<!--文章主体-->
+<p>结肠癌铁死亡相关预后风险预测模型的构建与分析</p>
+<p>摘&nbsp; 要</p>
+<p>背景：结肠癌（colon cancer）是一种常见的胃肠道恶性肿瘤，其临床行为和治疗反应都有很高的异质性，使得个体生存预测面临挑战。。铁死亡是一种新发现的铁依赖性细胞死亡，在癌症生化机理中起着至关重要的作用。因此，迫切需要开发一个强大的铁死亡相关基因的预后模型来精准地辅助对结肠癌患者的临床决策。</p>
+<p>方法：在585名结肠癌患者的GSE39582数据集中，初步确定了与铁死亡相关的差异基因。将单因素Cox回归分析和 LASSO回归分析相结合，建立了一个的铁死亡相关基因预后模型，用于总体生存预测。接着进行KM生存曲线和ROC曲线分析，从而评估改模型的预后性能。同时使用外部GSE17536数据集的结肠癌患者用于模型验证。通过结合GO和KEGG富集分析、基因集富集分析（GSEA）和单样本基因集富集分析（ssGSEA），对该模型基因的功能注释进行了探索。此外，根据该模型和其他临床病理特征数据构建了列线图。</p>
+<p>结果：由9个铁死亡相关基因组成的预后模型在训练集和测试集中均能准确区分高风险和低风险结肠癌患者。该模型与临床病理特征数据密切相关，对于不同的临床亚组具有强大的预测能力，此外，通过多因素Cox回归分析， 表明了风险评分（risk score）是结肠癌患者的独立预后因素(p值&lt;0.05)。功能注释分析表明，预后模型与癌症有关的标志物密切相关，特别是细胞周期、转录调控和免疫相关功能。此外，根据该模型和其他临床病理特征数据构建了列线图，从而更好地量化每个患者的生存风险。</p>
+<p>Abstract</p>
+<p>Background:</p>
+<p>Colon cancer (CC) is a common gastrointestinal malignant tumor with high heterogeneity in clinical behavior and response to treatment, making individualized survival prediction challenging. Ferroptosis is a newly discovered iron-dependent cell death that plays a critical role in cancer biology. Therefore, developing a powerful prognostic model with ferroptosis-related genes is urgently needed to guide precise clinical decision-making in CC patients.</p>
+<p>&nbsp;</p>
+<p>Methods:</p>
+<p>Alteration in the expression profile of ferroptosis-related genes was initially determined in GSE39582 dataset involving 585 CC patients. Univariate Cox regression analysis and LASSO-penalized Cox regression analysis were combined to establish a robust ferroptosis-related gene signature for overall survival prediction. The prognostic performance of the signature was validated in the GSE17536 dataset by Kaplan-Meier survival curve and time-dependent ROC curve analyses. Functional annotation of the signature was explored by integrating GO and KEGG enrichment analysis, GSEA analysis and ssGSEA analysis. Furthermore, a nomogram was constructed based on the gene signature and other clinicopathological features.</p>
+<p>Results:</p>
+<p>The prognostic signature composed of 9 ferroptosis-related genes accurately discriminated high-risk and low-risk patients with CC in both the training and validation datasets. The signature was tightly linked to clinicopathological features and possessed powerful predictive ability for distinct clinical subgroups. Furthermore, the risk score was confirmed to be an independent prognostic factor for CC patients by multivariate Cox regression analysis ( p value &lt; 0.05). Functional annotation analyses showed that the prognostic signature was closely correlated with pivotal cancer hallmarks, particularly cell cycle, transcriptional regulation, and immune-related functions. Moreover, a nomogram with the signature was also built to quantify outcome risk for each patient.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>Keywords</strong> ：ferroptosis, prognosis, gene signature, colon cancer, overall survival</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h1>第一章：引言</h1>
+<h2>1.1 &nbsp;研究背景</h2>
+<h5>1.1.1 &nbsp;研究结肠癌致病机制的重要意义</h5>
+<p>结肠癌是一种常见的胃肠道恶性肿瘤，每年大约导致90万人死亡<sup>[1]</sup>。随着人民生活水平的不断提升，结肠癌的发病率也呈现日渐上升的趋势<sup>[2]</sup>。结肠癌病因目前尚未完全阐明，且缺乏具有高度特异性的标志物，患者确诊时大都发展为中、晚期，其中肿瘤淋巴结早期阶段发生转移以及预后不良反应是导致大部分结肠癌患者死亡的主要因素<sup>[3]</sup>。近年来，研究发现，结肠癌的发生与吸烟、饮酒、摄入红肉以及加工食品等生活饮食习惯有关<sup>[4-6]</sup>，同时高脂肪、遗传、免疫缺陷等因素也有一定相关性<sup>[7-9]</sup>。目前临床上治疗结肠癌主要是以手术为主的综合治疗，主要包括手术治疗、放射治疗、化学治疗以及靶向治疗等<sup>[10]</sup>。同时会根据患者的整体状况和各个脏器功能状况、 肿瘤位置、临床分期、病理类型等决定最佳治疗措施。然而治疗过后，少数癌症患者还会出现复发和远处转移<sup>[11]</sup>，因而研究结肠癌的治病机理具有重要意义。</p>
+<h5>1.1.2&nbsp; 构建癌症预后风险预测模型的重要意义</h5>
+<p>在医学上，预后通常指的是基于样本个体的临床和非临床特征，预测样本个体在未来特定时间范围内出现特定结果的概率和风险<sup>[12]</sup>。结果往指的是特定的临床事件，如出现相关并发症，也可能是疾病恶化，疼痛加重，或着生活质量发生改变，最严重的就是死亡。预后可以帮助医生给患者提供相应的治疗方案，辅助临床决策，同时也可以帮助患者清晰的认识自己的疾病状况，从而更好的配合医生的治疗。所以精准的预后模型对医学研究和实践具有重要意义。</p>
+<p><br /> 1.1.3&nbsp; 细胞铁死亡的研究进展</p>
+<p>图 &nbsp;细胞铁死亡的调控途径<sup>[13]</sup></p>
+<p>&nbsp;</p>
+<p>细胞铁死亡是近年来发现的一种新型细胞死亡方式，通常在细胞死亡过程中，细胞内脂质活性氧堆积而引起的细胞膜磷脂过氧化损伤，以及伴有大量的铁离子积累，由Dixon等<sup>[14]</sup>报道并命名。细胞铁死亡的过程可以被铁螯合剂（去铁胺）和抗氧化剂（维生素E）等抑制，但不能被细胞凋亡抑制剂抑制<sup>[15, 16]</sup>，所以铁死亡是一种以脂质活性氧异常增多为特征、铁依赖性的、区别于细胞凋亡的细胞死亡类型。铁死亡的发生会影响体内脂质代谢、活性氧的生成与清除、以及铁离子代谢出现异常等。目前研究发现，铁死亡的发生机制涉及三类：第一个类 GSH/GPX4通路，例如抑制Xc-系统<sup>[14]</sup>、硫转移途径<sup>[17]</sup>、MVA途径<sup>[15]</sup>、谷氨酰胺途径<sup>[18]</sup>以及p53基因调节<sup>[19, 20]</sup>。第二类是关于铁代谢调控机制，例如与铁蛋白代谢有关的ATG5-ATG7-NCOA4途径<sup>[21]</sup>和IREB2基因的调控，以及p62-Keap1-NRF2<sup>[22]</sup>和HSPB1的调控途径<sup>[23]</sup>均对铁代谢有影响。第三类是围绕脂质代谢的相关途径，例如P53-SAT1-ALOX15<sup>[24]</sup>, ACSL4,LPCAT3<sup>[25]</sup>等基因对脂质代谢和铁死亡都有重要影响。</p>
+<p>研究发现在结肠癌细胞中P53通过阻止二肽基肽酶-4（DPP4）的活性来抑制结肠癌由erastin激活的细胞铁死亡，这和以前P53在其他癌细胞中引起铁死亡的作用不同。P53的下调会抑制DPP4在细胞中的积累，从而促进质膜相关的DPP4依赖性的脂质过氧化，最终导致铁死亡。此外，抗肿瘤化疗剂cisplatin已经应用在结肠癌细胞中诱导铁死亡，其重要机制是GSH的缺失和GPX的失活<sup>[26]</sup>。所以铁死亡机制在结肠癌抗肿瘤治疗方面具有重大潜力，从而为新药物的深入研究开辟了新途径。</p>
+<p>&nbsp;</p>
+<h5>1.1.4 构建结肠癌铁死亡相关预后风险预测模型的重要意义</h5>
+<p>目前关于铁死亡相关预后风险预测模型已有不少报道，侯晨阳<sup>[27]</sup>等人利用公共数据库TCGA乳腺癌患者的mRNA表达谱和临床相关数据，使用LASSO、Cox回归在TCGA数据集中构建多基因预后模型，然后利用MRTABRIC数据集的乳腺癌患者数据作为验证集。最后筛选出16个铁死亡相关基因可以用于预测乳腺癌的预后。张斯娜<sup>[28]</sup>利用TCGA数据库肝细胞癌患者的RNA二代测序数据和相应的临床数据和ICGC数据库LIRI-JR项目的肝细胞癌RNA二代测序数据和对应的临床数据，同样利用LASSO和Cox回归分析，构建Cox比例风险回归模型，探索模型对HCC患者生存预后的预测价值。Wu<sup>[29]</sup>等人利用GSCA数据库中32种癌症类型中挑选透明肾细胞癌的基因组数据与铁死亡相关基因进行差异表达分析，使用LASSO回归分析构建了铁死亡相关基因的五种风险模型（CARS、NCOA4、FANCD2、HMGCR和SLC7A11），再结合临床数据多因素分析，结果表明这五种铁死亡基因相关的风险预测模型都准确预测了透明肾细胞癌患者的预后，并表明铁死亡基因是几种癌症类型的潜在预后生物标志物和治疗靶点。而结肠癌铁死亡相关预后风险预测模型目前还没有人研究过，而铁死亡是一种新型的、独特的细胞死亡类型，在癌症治疗中起着至关重要的作用。因此迫切需要研究与结肠癌铁死亡相关基因的预后模型，从而帮助医生给患者提供更精确的临床决策。</p>
+<p>&nbsp;</p>
+<h2>1.2 研究内容和方案</h2>
+<p>本课题通过分析公共数据库GEO的结肠癌患者相关的转录组数据和临床信息,通过一系列的生物信息学方法建立结肠癌铁死亡预后风险预测模型，首先通过差异表达分析和单因素分析Cox回归分析确定结肠癌中具有预后价值的铁死亡相关基因，其次，利用Lasso多因素回归分析，建立了一个多基因预后模型，并在另一个外部基因集对该模型的预测效果进行了评估和验证。然后，进行功能富集分析，以探讨该铁死亡预后风险相关基因潜在的生物学机制。因此，本研究通过构建与铁死亡相关基因的预后风险预测模型，对结肠癌患者的总体生存时间进行评估，为结肠癌患者的预后预测和临床治疗提供参考。</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h1>第二章 结直肠癌铁死亡相关预后风险预测模型的构建与分析方法</h1>
+<h2>2.1 铁死亡相关基因的收集</h2>
+<p>铁死亡相关的基因来自于公共铁死亡数据库（FerrDb）http://www.zhounan.org/ferrdb），的基因标志物和抑制、激活铁死亡相关的基因<sup>[30]</sup>，去除重复后，最终获得260个FRG，用于以下分析。</p>
+<h2>2.2 测试集和验证集结直肠癌转录组数据的收集</h2>
+<p>本研究在公共数据库Gene Expression Omnibus（GEO <a href="https://www.ncbi.nlm.nih.gov/geo/">https://www.ncbi.nlm.nih.gov/geo/</a>）下载了测试集和验证集的转录组表达谱数据和临床信息，登录号分别为GSE39582和GSE17536。其中训练集共有585位患者，测试集共有177位患者。表1列出了本研究中测试集和验证集入选患者的临床特征数据。</p>
+<p>表1 ：测试集和验证集入选患者的临床特征基线表</p>
+<table width="416">
+<tbody>
+<tr>
+<td width="142">&nbsp;</td>
+<td width="132">
+<p><strong>GSE39582</strong></p>
+</td>
+<td width="142">
+<p><strong>GSE17536</strong></p>
+</td>
+</tr>
+<tr>
+<td width="142">
+<p><strong>No. of patients</strong></p>
+</td>
+<td width="132">
+<p>549</p>
+</td>
+<td width="142">
+<p>175</p>
+</td>
+</tr>
+<tr>
+<td width="142">
+<p><strong>Age (median,range)</strong></p>
+</td>
+<td width="132">
+<p>68 (22-97)</p>
+</td>
+<td width="142">
+<p>66 (26-92)</p>
+</td>
+</tr>
+<tr>
+<td width="142">
+<p><strong>Gender (%)</strong></p>
+</td>
+<td width="132">&nbsp;</td>
+<td width="142">&nbsp;</td>
+</tr>
+<tr>
+<td width="142">
+<p>Female</p>
+</td>
+<td width="132">
+<p>247 (44.99%)</p>
+</td>
+<td width="142">
+<p>80 (45.71%)</p>
+</td>
+</tr>
+<tr>
+<td width="142">
+<p>Male</p>
+</td>
+<td width="132">
+<p>302 (55.01%</p>
+</td>
+<td width="142">
+<p>95 (54.29%)</p>
+</td>
+</tr>
+<tr>
+<td width="142">
+<p><strong>Status (%)</strong></p>
+</td>
+<td width="132">&nbsp;</td>
+<td width="142">&nbsp;</td>
+</tr>
+<tr>
+<td width="142">
+<p>0</p>
+</td>
+<td width="132">
+<p>364 (66.30%)</p>
+</td>
+<td width="142">
+<p>103 (58.86%)</p>
+</td>
+</tr>
+<tr>
+<td width="142">
+<p>1</p>
+</td>
+<td width="132">
+<p>185 (33.70%)</p>
+</td>
+<td width="142">
+<p>72 (41.14%)</p>
+</td>
+</tr>
+<tr>
+<td width="142">
+<p><strong>OS days (median)</strong></p>
+</td>
+<td width="132">
+<p>1311.7</p>
+</td>
+<td width="142">
+<p>1560</p>
+</td>
+</tr>
+<tr>
+<td width="142">
+<p><strong>Clinical Stage (%)</strong></p>
+</td>
+<td width="132">&nbsp;</td>
+<td width="142">&nbsp;</td>
+</tr>
+<tr>
+<td width="142">
+<p>0</p>
+</td>
+<td width="132">
+<p>4 (0.73%)</p>
+</td>
+<td width="142">
+<p>0</p>
+</td>
+</tr>
+<tr>
+<td width="142">
+<p>1</p>
+</td>
+<td width="132">
+<p>31 (5.65%)</p>
+</td>
+<td width="142">
+<p>24 (13.71%)</p>
+</td>
+</tr>
+<tr>
+<td width="142">
+<p>2</p>
+</td>
+<td width="132">
+<p>256 (46.63%)</p>
+</td>
+<td width="142">
+<p>57 (32.57%)</p>
+</td>
+</tr>
+<tr>
+<td width="142">
+<p>3</p>
+</td>
+<td width="132">
+<p>200 (36.43%)</p>
+</td>
+<td width="142">
+<p>56 (32.00%)</p>
+</td>
+</tr>
+<tr>
+<td width="142">
+<p>4</p>
+</td>
+<td width="132">
+<p>58 (10.56%)</p>
+</td>
+<td width="142">
+<p>38 (21.71%)</p>
+</td>
+</tr>
+<tr>
+<td width="142">
+<p><strong>T Stage (%)</strong></p>
+</td>
+<td width="132">&nbsp;</td>
+<td width="142">&nbsp;</td>
+</tr>
+<tr>
+<td width="142">
+<p>T0</p>
+</td>
+<td width="132">
+<p>1 (0.18%)</p>
+</td>
+<td width="142">
+<p>N/A</p>
+</td>
+</tr>
+<tr>
+<td width="142">
+<p>T1</p>
+</td>
+<td width="132">
+<p>11 (2.00%)</p>
+</td>
+<td width="142">
+<p>N/A</p>
+</td>
+</tr>
+<tr>
+<td width="142">
+<p>T2</p>
+</td>
+<td width="132">
+<p>42 (7.65%)</p>
+</td>
+<td width="142">
+<p>N/A</p>
+</td>
+</tr>
+<tr>
+<td width="142">
+<p>T3</p>
+</td>
+<td width="132">
+<p>355 (64.66%)</p>
+</td>
+<td width="142">
+<p>N/A</p>
+</td>
+</tr>
+<tr>
+<td width="142">
+<p>T4</p>
+</td>
+<td width="132">
+<p>117 (21.31%)</p>
+</td>
+<td width="142">
+<p>N/A</p>
+</td>
+</tr>
+<tr>
+<td width="142">
+<p>Tis</p>
+</td>
+<td width="132">
+<p>3 (0.55%)</p>
+</td>
+<td width="142">
+<p>N/A</p>
+</td>
+</tr>
+<tr>
+<td width="142">
+<p>N/A</p>
+</td>
+<td width="132">
+<p>20 (3.64%)</p>
+</td>
+<td width="142">
+<p>N/A</p>
+</td>
+</tr>
+<tr>
+<td width="142">
+<p><strong>N Stage (%)</strong></p>
+</td>
+<td width="132">&nbsp;</td>
+<td width="142">&nbsp;</td>
+</tr>
+<tr>
+<td width="142">
+<p>N+</p>
+</td>
+<td width="132">
+<p>6 (1.09%)</p>
+</td>
+<td width="142">
+<p>N/A</p>
+</td>
+</tr>
+<tr>
+<td width="142">
+<p>N0</p>
+</td>
+<td width="132">
+<p>291 (53.01%)</p>
+</td>
+<td width="142">
+<p>N/A</p>
+</td>
+</tr>
+<tr>
+<td width="142">
+<p>N1</p>
+</td>
+<td width="132">
+<p>128 (23.32%)</p>
+</td>
+<td width="142">
+<p>N/A</p>
+</td>
+</tr>
+<tr>
+<td width="142">
+<p>N2</p>
+</td>
+<td width="132">
+<p>98 (17.85%)</p>
+</td>
+<td width="142">
+<p>N/A</p>
+</td>
+</tr>
+<tr>
+<td width="142">
+<p>N3</p>
+</td>
+<td width="132">
+<p>6 (1.09%)</p>
+</td>
+<td width="142">
+<p>N/A</p>
+</td>
+</tr>
+<tr>
+<td width="142">
+<p>N/A</p>
+</td>
+<td width="132">
+<p>20 (3.64%)</p>
+</td>
+<td width="142">
+<p>N/A</p>
+</td>
+</tr>
+<tr>
+<td width="142">
+<p><strong>M Stage (%)</strong></p>
+</td>
+<td width="132">&nbsp;</td>
+<td width="142">&nbsp;</td>
+</tr>
+<tr>
+<td width="142">
+<p>M0</p>
+</td>
+<td width="132">
+<p>468 (85.25%)</p>
+</td>
+<td width="142">
+<p>N/A</p>
+</td>
+</tr>
+<tr>
+<td width="142">
+<p>M1</p>
+</td>
+<td width="132">
+<p>59 (10.75%)</p>
+</td>
+<td width="142">
+<p>N/A</p>
+</td>
+</tr>
+<tr>
+<td width="142">
+<p>MX</p>
+</td>
+<td width="132">
+<p>2 (0.36%)</p>
+</td>
+<td width="142">
+<p>N/A</p>
+</td>
+</tr>
+<tr>
+<td width="142">
+<p>N/A</p>
+</td>
+<td width="132">
+<p>20 (3.64%)</p>
+</td>
+<td width="142">
+<p>N/A</p>
+</td>
+</tr>
+<tr>
+<td width="142">
+<p><strong>Tumor Location (%)</strong></p>
+</td>
+<td width="132">&nbsp;</td>
+<td width="142">&nbsp;</td>
+</tr>
+<tr>
+<td width="142">
+<p>Distal</p>
+</td>
+<td width="132">
+<p>333 (60.66%)</p>
+</td>
+<td width="142">
+<p>N/A</p>
+</td>
+</tr>
+<tr>
+<td width="142">
+<p>Proximal</p>
+</td>
+<td width="132">
+<p>216 (39.34%)</p>
+</td>
+<td width="142">
+<p>N/A</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<h2>2.3差异表达基因的鉴定</h2>
+<p>在GSE39582数据集中，使用R语言软件包&ldquo;limma&rdquo;对肿瘤样本和正常样本之间做基因差异表达分析，筛选出与铁死亡相关的差异基因（DEGs）。筛选阈值为log2FC大于1.5或者小于0.67，p-value &lt;0.05。</p>
+<h2>2.4 单因素cox回归分析</h2>
+<p>为了建立结肠癌患者的预后模型，首先使用R语言软件包&ldquo;survival&rdquo;的Coxph函数进行单因素Cox回归分析，以筛选结肠癌患者总生存率（overall survival，OS）与铁死亡显著相关的差异表达铁死亡基因（DE-FRG）。为了筛选可靠的预后相关基因，应删除GSE39582数据集中临床数据不完整且OS小于或等于一个月的样本。在单变量Cox回归分析中，将DE-FRG标准化的表达化的数据和包括OS时间和OS状态在内的预后数据用作输入文件，p值小于0.05的DE-FRG保留为具有预后价值的候选基因。</p>
+<h2>2.5 Lasso回归分析</h2>
+<p>为了达到最大化减小过度拟合的影响，使用R语言软件包&ldquo;glmnet&rdquo;进行LASSO Cox回归分析，以构建基于铁死亡相关基因的预后模型<sup>[31]</sup>，得出最佳模型的基因和与之对应的回归系数。</p>
+<p>&nbsp;</p>
+<h2>2.6 多因素回归分析</h2>
+<p>了进一步确定基于结肠癌铁死亡相关基因的预后模型是否可以作为独立预后预测因子，以现有的临床指标和风险评分进行多因素Cox回归分析。同样使用R语言软件包&ldquo;glmnet&rdquo;包进行分析。</p>
+<h2>2.7 riskscore的预后分析</h2>
+<p>接着根据每个基因的标准化过的表达水平和相对应的回归系数计算每个患者的风险评分（Risk score）。将得到的风险评分根据中位数将患者分为高风险组（High Risk）和低风险组（Low Risk），在生存分析中，根据高、低风险两组运用R语言软件包&ldquo;survminer&rdquo;构建生存曲线。 同时使用R语言软件包&ldquo;timeROC&rdquo;进行ROC曲线分析，评估其特征基因预后模型的预测能力。</p>
+<h2>2.8 列线图的构建</h2>
+<p>根据逐步回归分析的结果，建立结肠癌铁死亡相关基因预后模型的列线图，通过临床信息来量化结肠癌个体患者的预后风险和总生存率，从而评价该模型是否具有良好的性能和临床应用价值。</p>
+<h2>2.9 基因功能富集分析</h2>
+<p><strong>GO富集分析</strong></p>
+<p>基因本体GO（Gene Ontology）是基因功能国际标准分类体系，他们把基因的功能分成了三个部分：：细胞组分（cellular component,CC）、分子功能（molecular function,MF）、生物过程（biological process,BP）。利用GO数据统一所有物种基因以及基因产物属性的表示方式，主要用来注释基因和基因产物，并收集和传播注释数据。</p>
+<p>运用R语言软件包&ldquo;limma&rdquo;对高风险患者组和低风险患者组做基因的差异表达分析，筛选出风险差异基因。通过R语言软件包&ldquo;clusterProfiler&rdquo;对高、低风险两组中的差异基因进行基因本体(gene ontology，GO)分析，对结果进行功能性注释。</p>
+<p><strong>KEGG富集分析</strong></p>
+<p>京都基因和基因组百科全书KEGG (kyoto encyclopedia of genes and genomics)是系统分析基因产物在细胞中的代谢途径以及这些基因产物功能的数据库。KEGG整合了基因组、生化等方面的数据，包括代谢通路、药物、疾病等等。根据分析高、低风险组差异表达基因在某一通路上是否出现，即为差异表达基因的通路富集分析。</p>
+<p><strong>GSEA富集分析</strong></p>
+<p>基因集富集分析GSEA（Gene Set Enrichment Analysis）是一种针对全基因组表达谱芯片数据的分析方法，将待测基因与预定义的基因集进行分析比较。即通过现有的对基因的功能、生物学意义等信息基础，构建一个分子标签数据库。在此基因数据库中将已知基因按照一定规则分为多个特定的功能基因集。通过分析基因表达数据，从而了解改表达数据在特定的功能基因集中的表达状况，以及这种表达状况是否存在统计学显著性，从而解释本研究中高低危险组富集到的通路。</p>
+<p>&nbsp;</p>
+<p><strong>ssGSEA富集分析</strong></p>
+<p>单样本基因集富集分析ssGSEA（single-sample Gene Set Enrichment Analysis）是一种特殊的GSEA，基于R语言软件包&ldquo;GSVA&rdquo;。主要根据表达谱文件计算每个基因的rank值，再进行统计分析。通过ssGSEA可以分析每个样本的免疫细胞或者免疫功能，免疫通路的活性，然后根据免疫活性进行分组，从而解释本研究中高、低风险组相关基因与中免疫相关的通路。</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h1>第三章 结癌铁死亡相关预后风险预测模型的构建与分析</h1>
+<h2>3.1 结肠癌差异表达铁死亡相关基因的鉴定</h2>
+<p>为了研究铁死亡在结肠癌中具有预后作用的铁死亡相关基因，首先从公共铁死亡相关基因的数据库FerrDb中搜集了260个铁死亡相关基因。在GSE39582基因集中把结肠癌患者样本和正常样本做差异表达，结果共有3680个差异表达基因，同时发现结肠癌患者样本中有68个与铁死亡相关的差异基因，其中38个基因上调，30个基因下调。如图2所示</p>
+<table>
+<tbody>
+<tr>
+<td width="113">&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>图2&nbsp; 用韦恩图表示差异表达基因和铁死亡相关基因</strong></p>
+<h2>3.2 结肠癌预后相关铁死亡相关基因的鉴定</h2>
+<p>随后，将这些差异表达的铁死亡相关基因进行单因素Cox回归分析，结果显示，ABCC1、ATF3、AURKA、BID、DUSP1、HELLS、NFS1、RRM2、SLC1A4、SLC2A3、TXNIP、VLDLR和ZFP69B 共13个铁死亡相关基因的表达水平与结肠癌的总体生存率显著相关，如图3a，展示单因素Cox回归分析结果的森林图，图3b，展示了13个预后基因在结肠癌患者样本和正常样本的表达情况，发现正常样本大部分预后基因的表达量低于结肠癌患者样本的表达量。</p>
+<p><strong>图</strong><strong>3 </strong><strong>：</strong><strong>a</strong><strong>展示单因素回归分析结果的森林图</strong></p>
+<p><strong>b</strong><strong>热图显示</strong><strong>13</strong><strong>个预后基因在肿瘤样本和正常对照组织之间的表达情况</strong></p>
+<p>&nbsp;</p>
+<h2>3.3 结直肠癌铁死亡相关预后风险预测模型的构建</h2>
+<p>根据前期分析结果得到的13个基因的表达谱，进行了LASSO Cox回归分析，从13个候选铁死亡相关预后基因中得出最佳的预后基因。根据LASSO模型中的最佳&lambda;值通过选择最低标准进行交叉验证，绘制出二项分布偏差曲线与Log(&lambda;)的关系曲线，如图4-A和B，最终筛选出9个铁死亡相关预后基因，如图4-C。对测试集GSE39582中的每一位患者，根据最终筛选出的每个铁死亡相关预后基因的回归系数和表达水平计算出风险评分。危险评分公式为：e^(-0.0587&times;ABCC1的表达量+0.0523&times;ATF3的表达量-0.0135&times;BID的表达量-0.0665&times;NFS1的表达量-0.0690&times;RRM2的表达量+0.1295&times;SLC2A3的表达量+0.0305&times;TXNIP的表达量+0.0508&times;VLDLR的表达量-0.0534&times;ZFP69B的表达量)。</p>
+<p><strong>图4：A-B：确定最优&lambda;值。</strong></p>
+<p><strong>C：具有预后特征的9个铁死亡相关基因的LASSO Cox系数分布</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p>根据风险评分的中位数将结肠癌患者分为高风险组和低风险组。对于每个结肠癌患者来说，风险评分越高，表明其总生存率越低。所以表达水平越高、值为正越大的铁死亡相关预后基因越具有死亡风险特征，反之亦然。</p>
+<p>如图E的生存状态分布显示，高风险患者与低风险患者相比，生存时间更短。具有预后特征的9个铁死亡相关基因的表达谱在高风险组和低风险组之间具有明显的差异。与此同时，KM生存分析表明，在GSE39582数据集中，高风险组的患者与低风险组患者表现出更低的生存率，且<em>P</em>&lt;0.0001,如图5G。此外，根据ROC曲线评价总体生存风险评分的预测性能，曲线下面积AUC在1年内达到0.674，2年内达到0.652，3年内达到0.669，如图5H 。</p>
+<p><strong>图5:</strong></p>
+<h2>3.4 结肠癌铁死亡相关预后风险预测模型的预后分析与验证</h2>
+<p>为了分析所构建的结肠癌铁死亡相关的预后模型与临床特征之间的关系，分别分析了年龄、性别、肿瘤位置、TMN癌症分期等不同临床特征分组之间的风险评分。如图6，晚期结肠癌患者的风险评分明显高于早期癌症患者，对于肿瘤位置，肿瘤远端位置的患者风险评分明显低于肿瘤近段位置的患者风险评分。但是，风险评分与年龄和性别没有明显关系。其他Stage分期、TMN分期的患者风险评分之间都存在显著差异。结果表明：建立基于铁死亡相关基因的预后模型与肿瘤位置、TMN分期、T stage、M stage、N stage等临床特征数据密切相关。</p>
+<p>此外，为了更好地评估所构建预后模型的性能，进行基于临床特征的生存分析，从而研究该模型是否具有预测不同临床特征亚组总体生存率的能力。在在TNM期（I/II 期和 III/IV 期）、肿瘤位置（近端和远端）、T期（T1/2和T3/4）、N期（N0和N1/2/3）、M期（M0 和M1）各亚组中，根据构建公式计算出风险评分的中位数，将各亚组的结肠癌患者计算的风险评分分为高危险组和低危险组。如图6B所示，在上述大部分亚组中，高危险组患者的生存概率明显小于低危险组的患者。综上所述，该预测模型具有强大的预测能力。</p>
+<p><strong>图</strong><strong>6</strong><strong>：</strong><strong>A</strong><strong>：不同临床特征分组之间的风险评分显著性分析</strong></p>
+<p>&nbsp;</p>
+<p>为了验证所构建的预后模型的可靠性，通过使用GSE39582数据集中计算风险评分的公式，计算出测试集GSE17536结肠癌患者的风险评分，同样根据风险评分的中位数将测试集结肠癌患者分为高危险组和低危险组。如图7B的生存状态分布显示，高风险患者与低风险患者相比更早死亡，总体生存时间更短。同时，模型中具有预后特征的9个铁死亡相关基因的表达谱在高风险组和低风险组之间具有显著差异。缺少GSE17536生存分析和ROC这些结果表明，基于铁死亡相关基因的预后模型在预测结肠癌患者的总体生存时间方面具有一定的准确性。此外，通过HPA(The Human Protein Atlas)来验证铁死亡相关基因在结肠癌患者和正常对照组织之间的表达差异，发现具有代表性的铁死亡相关基因SLC2A3和 NFS1在结肠癌组织中的表达水平明显高于正常结肠组织。</p>
+<p>为了进一步确定基于结肠癌铁死亡相关基因的预后模型是否可以作为独立预后预测因子，以现有的临床指标和风险评分进行多因素Cox回归分析。如图7E所示，在GSE39582和GSE17536两个数据集中，风险评分与患者的总生存时间显著相关，表明风险评分为结肠癌患者的独立预后因素。同时还发现（图7）在训练集GSE39582中和测试集GSE17536中，年龄、性别、Stage、危险评分均可作为独立的预后因子，<em>P</em>&lt;0.05。</p>
+<p><strong>图</strong><strong>7</strong><strong>：</strong></p>
+<p>&nbsp;</p>
+<h2>3.5 结直肠癌铁死亡相关预后风险预测列线图的构建</h2>
+<p>为了让临床信息来量化结肠癌个体患者的预后风险和总生存率，我们用多因素Cox回归分析后得到铁死亡相关预后风险预测模型的4个独立的预后因素（性别、年龄、Stage、风险评分）构建了列线图，见图8-A。构建的列线图展示了各个独立预后因素在标尺上确定的分数，即根据某个患者每个变量的真实情况找到对应的刻度，向上映射到顶部的刻度（Points），得出每个变量的分值，通过将列线图中标尺上确定的分数相加得倒总分值（Total points），根据总得分值向下映射，从而在图中底部显示的总分预测患者的生存率。其中，总分越大、说明患者的总体生存概率越低。</p>
+<p><strong>图</strong><strong> 8</strong><strong>：列线图</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p>&nbsp;</p>
+<p>[1] BRAY F, FERLAY J, SOERJOMATARAM I, et al. Global cancer statistics 2018: GLOBOCAN estimates of incidence and mortality worldwide for 36 cancers in 185 countries [J]. CA: a cancer journal for clinicians, 2018, 68(6): 394-424.</p>
+<p>[2] FU J F, HUANG Y Q, YANG J, et al. Clinical characteristics and prognosis of young patients with colorectal cancer in Eastern China [J]. World J Gastroenterol, 2013, 19(44): 8078-84.</p>
+<p>[3] 陈俊生. 结肠癌患者手术治疗预后及危险因素 [J]. 中国药物与临床, 2021, 21(02): 281-3.</p>
+<p>[4] PARK S Y, WILKENS L R, SETIAWAN V W, et al. Alcohol Intake and Colorectal Cancer Risk in the Multiethnic Cohort Study [J]. Am J Epidemiol, 2019, 188(1): 67-76.</p>
+<p>[5] FAGUNWA I O, LOUGHREY M B, COLEMAN H G. Alcohol, smoking and the risk of premalignant and malignant colorectal neoplasms [J]. Best Pract Res Clin Gastroenterol, 2017, 31(5): 561-8.</p>
+<p>[6] ABU‐GHAZALEH N, CHUA W J, GOPALAN V. Intestinal microbiota and its association with colon cancer and red/processed meat consumption [J]. Journal of gastroenterology and hepatology, 2021, 36(1): 75-88.</p>
+<p>[7] TRIFF K, MCLEAN M W, CALLAWAY E, et al. Dietary fat and fiber interact to uniquely modify global histone post‐translational epigenetic programming in a rat colon cancer progression model [J]. International journal of cancer, 2018, 143(6): 1402-15.</p>
+<p>[8] NADELLA S, BURKS J, AL-SABBAN A, et al. Dietary fat stimulates pancreatic cancer growth and promotes fibrosis of the tumor microenvironment through the cholecystokinin receptor [J]. American Journal of Physiology-Gastrointestinal and Liver Physiology, 2018, 315(5): G699-G712.</p>
+<p>[9] BANSKOTA S, DAHAL S, KWON E, et al. &beta;-Catenin gene promoter hypermethylation by reactive oxygen species correlates with the migratory and invasive potentials of colon cancer cells [J]. Cellular Oncology, 2018, 41(5): 569-80.</p>
+<p>[10]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 魏剑辉. 结肠癌靶向治疗的研究进展 [J]. 医疗装备, 2021, 34(02): 187-8.</p>
+<p>[11]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; KUIPERS E J, GRADY W M, LIEBERMAN D, et al. Colorectal cancer [J]. Nature Reviews Disease Primers, 2015, 1(15065.</p>
+<p>[12]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOONS K G, ROYSTON P, VERGOUWE Y, et al. Prognosis and prognostic research: what, why, and how? [J]. BMJ, 2009, 338(b375.</p>
+<p>[13]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LI J, CAO F, YIN H L, et al. Ferroptosis: past, present and future [J]. Cell Death Dis, 2020, 11(2): 88.</p>
+<p>[14]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DIXON S J, LEMBERG K M, LAMPRECHT M R, et al. Ferroptosis: An Iron-Dependent Form of Nonapoptotic Cell Death [J]. 2012,</p>
+<p>[15]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ANGELI J P F, SHAH R, PRATT D A, et al. Ferroptosis Inhibition: Mechanisms and Opportunities [J]. Trends Pharmacol Sci, 2017, 38(5): 489-98.</p>
+<p>[16]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; YAGODA N, VON RECHENBERG M, ZAGANJOR E, et al. RAS-RAF-MEK-dependent oxidative cell death involving voltage-dependent anion channels [J]. Nature, 2007, 447(7146): 864-8.</p>
+<p>[17]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MCBEAN G J. The transsulfuration pathway: a source of cysteine for glutathione in astrocytes [J]. Amino Acids, 2012, 42(1): 199-205.</p>
+<p>[18]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GAO M, MONIAN P, QUADRI N, et al. Glutaminolysis and Transferrin Regulate Ferroptosis [J]. Mol Cell, 2015, 59(2): 298-308.</p>
+<p>[19]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; JIANG L, HICKMAN J H, WANG S J, et al. Dynamic roles of p53-mediated metabolic activities in ROS-induced stress responses [J]. Cell Cycle, 2015, 14(18): 2881-5.</p>
+<p>[20]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; JIANG L, KON N, LI T, et al. Ferroptosis as a p53-mediated activity during tumour suppression [J]. Nature, 2015, 520(7545): 57-62.</p>
+<p>[21]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HOU W, XIE Y, SONG X, et al. Autophagy promotes ferroptosis by degradation of ferritin [J]. Autophagy, 2016, 12(8): 1425-8.</p>
+<p>[22]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SUN X, OU Z, CHEN R, et al. Activation of the p62-Keap1-NRF2 pathway protects against ferroptosis in hepatocellular carcinoma cells [J]. Hepatology, 2016, 63(1): 173-84.</p>
+<p>[23]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SUN X, OU Z, XIE M, et al. HSPB1 as a novel regulator of ferroptotic cancer cell death [J]. Oncogene, 2015, 34(45): 5617-25.</p>
+<p>[24]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; OU Y, WANG S J, LI D, et al. Activation of SAT1 engages polyamine metabolism with p53-mediated ferroptotic responses [J]. Proc Natl Acad Sci U S A, 2016, 113(44): E6806-E12.</p>
+<p>[25]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; KAGAN V E, MAO G, QU F, et al. Oxidized arachidonic and adrenic PEs navigate cells to ferroptosis [J]. Nat Chem Biol, 2017, 13(1): 81-90.</p>
+<p>[26]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; XIE Y, ZHU S, SONG X, et al. The Tumor Suppressor p53 Limits Ferroptosis by Blocking DPP4 Activity [J]. Cell Rep, 2017, 20(7): 1692-704.</p>
+<p>[27]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 侯晨阳, 胡艳玲, 黄代政, et al. 基于TCGA研究铁死亡相关基因对乳腺癌患者的预后 [J]. 广西大学学报(自然科学版), 2020, 45(06): 1498-507.</p>
+<p>[28]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 张斯娜. 基于生物信息学方法构建肝细胞癌预后风险模型及铁死亡分子机制的探讨 [D]; 内蒙古医科大学, 2019.</p>
+<p>[29]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WU G, WANG Q, XU Y, et al. A new survival model based on ferroptosis-related genes for prognostic prediction in clear cell renal cell carcinoma [J]. Aging (Albany NY), 2020, 12(14): 14933-48.</p>
+<p>[30]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ZHOU N, BAO J. FerrDb: a manually curated resource for regulators and markers of ferroptosis and ferroptosis-disease associations [J]. Database (Oxford), 2020, 2020(</p>
+<p>[31]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FRIEDMAN J, HASTIE T, TIBSHIRANI R. Regularization Paths for Generalized Linear Models via Coordinate Descent [J]. J Stat Softw, 2010, 33(1): 1-22.</p>
+<p>&nbsp;</p>
+<div class="hide-on-print">
+    <div class="info">Posted by <a href="https://rickywang.baklib.com/">Ricky</a> on <time datetime="2020-03-10">2020-03-10</time>. </div>
+    <div class="info">Tags: endnote, life.</div>
+    
+    
+</div>
+      </article>
+    </main>
+   <footer class="hide-on-print">© 2016 - <time><script>document.write(new Date().getFullYear())</script></time> <a href="/" rel="author">Rui Wang</a>.
+    <a href="/README.html">Blog README</a>.</footer>
+  
+
+</body></html>
